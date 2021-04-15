@@ -1,0 +1,74 @@
+html{
+  height: 100vh;
+  background-color: rgb(14, 13, 13);
+}
+.game {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+.body {
+    display: flex;
+    background-color: #black;
+    
+}
+
+.help {
+    color: #666;
+    margin: 10px;
+    text-align: center;
+}
+
+.left {
+    text-align: center;
+    width: 50%;
+    border: thin solid #ddd;
+}
+
+.right {
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    border: thin solid #ddd;
+}
+
+.star {
+	display: inline-block;
+    margin: 0 15px;
+}
+
+.star:after {
+    content: "\2605";
+    font-size: 45px;
+    background: radial-gradient(rgb(255, 246, 197),gold, rgb(255, 175, 2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.number {
+    background-color: #eee;
+    border: thin solid #ddd;
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+    font-size: 25px;
+    box-shadow: 3px 3px 5px 4px #ccc; 
+
+  }
+
+  .number:focus, .number:active {
+    outline: none;
+    border: thin solid #ddd;
+  }
+  
+  .timer {
+    color: #666;
+    margin-top: 3px;
+    margin-left: 3px;
+  }
+  
+  .game-done .message {
+    font-size: 250%;
+    font-weight: bold;
+    margin: 15px;
+  }

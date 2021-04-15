@@ -1,0 +1,43 @@
+{
+  "name": "match-star-count",
+  "version": "1.0.0",
+  "description": "A game where you need to match the star count by clicking appropriate buttons",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-cli serve --mode development --config config/webpack.config.dev.js",
+    "build": "webpack --config config/webpack.config.production.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gretaivan/game-match-star-count.git"
+  },
+  "keywords": [
+    "game",
+    "react",
+    "webpack"
+  ],
+  "author": "Greta Ivan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gretaivan/game-match-star-count/issues"
+  },
+  "homepage": "https://github.com/gretaivan/game-match-star-count#readme",
+  "dependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.1",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
