@@ -28,7 +28,8 @@ const Game = () => {
         if (currentStatus == 'used'){
             return; 
         }
-        const newCandidateNums = candidateNums.concat(number); 
+        //check if numbwe is available if not, allow unmarking the wrongly selected number
+        const newCandidateNums = currentStatus === 'available' ? candidateNums.concat(number) : candidateNums.filter(clickedNum => clickedNum !== number); 
         if (Utils.sum(newCandidateNums) !== stars){
             setCandidateNums(newCandidateNums);
         } else {
