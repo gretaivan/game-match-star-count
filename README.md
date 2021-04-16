@@ -13,7 +13,11 @@ Mathe the star count is a small game that shows the player the number of stars a
     + blue for buttons that are being selected to form a sum of the star count
 + After the all buttons used 
     + star generation is stopped
-    + 
+    + button reset Play Again is generated
++ Timer is rendered to track the game and starts with 10 second countdown
+
+## Bugs 
++ Timer bug: when user clicks the timer stops the countdown [resolved]
 
 ## Process
 + iniatialises npm
