@@ -13,7 +13,7 @@ const Timer = () => {
             }, 1000);
             return () => clearTimeout(timer);
         }
-    }); 
+    }, [seconds]); 
 
 
 
