@@ -10,14 +10,17 @@ const InputButtons = props => {
         candidate: 'deepskyblue',
     };
 
+    const handleClick = () => {
+        console.log("button " + buttons+" status: " + props.status); 
+        return props.onClick(buttons, props.status)
+    }
+
     return(
         <button
-        className="number"
-        style={{backgroundColor: colors[props.status]}}
-        onClick={() => {console.log(buttons+props.status); return props.onClick(buttons, props.status)}}
-      >
-        {props.number}
-      </button>
+            className="number"
+            style={{backgroundColor: colors[props.status]}}
+            onClick={ handleClick }
+      > {props.number} </button>
   );
 }
 

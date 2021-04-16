@@ -11,6 +11,9 @@ Mathe the star count is a small game that shows the player the number of stars a
     + green for correctly used buttons
     + red for button that is more than star count or is a added to the sum and the sum is more than the star count
     + blue for buttons that are being selected to form a sum of the star count
++ After the all buttons used 
+    + star generation is stopped
+    + 
 
 ## Process
 + iniatialises npm

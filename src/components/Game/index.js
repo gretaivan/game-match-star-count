@@ -1,5 +1,5 @@
 import React, { useState }   from 'react';
-import { Stars, InputButtons } from '..';
+import { Stars, InputButtons, PlayAgain, Timer } from '..';
 import Utils from '../../utils'
 
 const Game = () => {
@@ -10,17 +10,22 @@ const Game = () => {
     const [candidateNums, setCandidateNums] = useState([]); 
 
     const wrongCandidate = Utils.sum(candidateNums) > stars;
+    const gameIsDone = availableNums.length === 0;
+
+    const resetGame = () => {
+        setStars(Utils.random(1, 9));
+        setAvailableNums(Utils.range(1, 9));
+        setCandidateNums([]);
+    }
 
     const numberStatus = (number) => {
         if(!availableNums.includes(number))
         {
             return 'used';
         } 
-
         if (candidateNums.includes(number)){
             return wrongCandidate ? 'wrong' : 'candidate';
         }
-
         return 'available';
     }
 
@@ -51,10 +56,12 @@ const Game = () => {
             </div>
             <div className="body">
                 <div className="left">
-                    {Utils.range(1, stars).map( number => 
-                        < Stars key={ number } 
-                        number={ number }
-                        />)}
+                    { gameIsDone ? ( 
+                        <PlayAgain onClick={ resetGame }/>
+                    ) : (
+                        < Stars count={ stars }/>
+                    )}
+                    
                 </div>
                 <div className="right">
                 { Utils.range(1, maxKeyNum).map(number =>  
@@ -64,11 +71,10 @@ const Game = () => {
                     status={numberStatus(number)}
                     number={number}
                     onClick={onNumberClick}
-                   
                     />)}
                 </div>
             </div>
-            <div className="timer">Time Remaining: 10</div>
+            <Timer />
         </>
     )
 }
