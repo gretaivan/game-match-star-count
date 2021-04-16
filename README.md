@@ -17,7 +17,7 @@ Mathe the star count is a small game that shows the player the number of stars a
 + Timer is rendered to track the game and starts with 10 second countdown
 
 ## Bugs 
-+ Timer bug: when user clicks the timer stops the countdown [resolved]
++ Timer bug: when user clicks the timer stops the countdown [resolved"]
 
 ## Process
 + iniatialises npm
